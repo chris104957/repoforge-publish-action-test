@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: dummy-pkg
+Version: 0.1.0
+Summary: A dummy package for testing RepoForge publish action.
+Author: Test User
+Author-email: test@example.com
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-python
+Dynamic: summary
