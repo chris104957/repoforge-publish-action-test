@@ -22,7 +22,6 @@ jobs:
           api_token: ${{ secrets.REPOFORGE_API_TOKEN }}
           hash_id: ${{ secrets.REPOFORGE_HASH_ID }}
           package_dir: python/dist
-          fail_on_conflict: true
   
   publish-docker:
     runs-on: ubuntu-latest
