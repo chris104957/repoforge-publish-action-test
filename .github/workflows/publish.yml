@@ -27,8 +27,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and push Docker image
     steps:
-      - uses: actions/checkout@v4
-
+      - name: Checkout repo
+        uses: actions/checkout@v4
       - name: Publish Docker image to RepoForge
         uses: chris104957/repoforge-publish-action@main
         with:
