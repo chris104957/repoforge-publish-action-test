@@ -1,0 +1,30 @@
+name: Publish Python Package to RepoForge
+
+on:
+  push:
+    branches: [ main ]  # or any branch you want to test from
+    paths:
+      - 'dist/**'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Twine
+        run: pip install twine
+
+      - name: Publish to RepoForge
+        uses: chris104957/repoforge-publish-action@main
+        with:
+          api_token: ${{ secrets.REPOFORGE_API_TOKEN }}
+          hash_id: ${{ secrets.REPOFORGE_HASH_ID }}
+          package_dir: dist
