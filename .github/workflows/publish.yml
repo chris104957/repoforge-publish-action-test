@@ -31,7 +31,7 @@ jobs:
       - name: Publish Docker image to RepoForge
         uses: chris104957/repoforge-publish-action@main
         with:
-          api_token: ${{ secrets.REPOFORGE_TOKEN }}
+          api_token: ${{ secrets.REPOFORGE_API_TOKEN }}
           hash_id: ${{ secrets.REPOFORGE_HASH_ID }}
           registry_name: my-registry
           docker_context: docker
